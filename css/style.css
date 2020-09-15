@@ -1,0 +1,121 @@
+			header{
+			  animation-name: slidedown;
+			  animation-duration: 1s;
+			  animation-timing-function: cubic-bezier(0.000, 0.000, 0.000, 1.000); 
+			}
+			nav{
+			  width: 100%;
+			  position: -webkit-sticky;
+			  position: fixed;
+			}
+			ul {
+			  list-style-type: none;
+			  top: 0;
+			  margin: 0;
+			  padding: 0;
+			  overflow: hidden;
+			  background-color: #333;
+			}
+
+			li {
+			  float: left;
+			}
+
+			li a {
+			  animation-timing-function: ease;
+			  animation-name: offHover;
+			  animation-duration: 500ms;
+			  display: block;
+			  color: white;
+			  text-align: center;
+			  padding: 14px 16px;
+			  text-decoration: none;
+			}
+
+			/* Change the link color to #111 (black) on hover */
+			li a:hover {
+				animation-timing-function: ease;
+				animation-name: toHover;
+				animation-duration: 500ms;
+				background-color: #111;
+			}
+
+			@keyframes toHoverActive{
+				0%{background-color: #4CAF50}
+				100%{background-color: #357a38}
+			}
+			@keyframes offHoverActive{
+				0%{background-color: #357a38}
+				100%{background-color: #4CAF50}
+			}
+
+			@keyframes toHover{
+				0%{background-color: #333;}
+				100%{background-color: #111;}
+			}
+			@keyframes offHover{
+				0%{background-color: #111;}
+				100%{background-color: #333;}
+			}
+
+			.active {
+			  animation-fill-mode: forwards;
+			  animation-timing-function: ease;
+			  animation-duration: 500ms;
+			  animation-name: offHoverActive;
+			  background-color: #4CAF50;
+			}
+			.active:hover {
+			  animation-fill-mode: forwards;
+			  animation-timing-function: ease;
+			  animation-duration: 500ms;
+			  animation-name: toHoverActive;
+			  background-color: #357a38;
+			}
+
+			@keyframes slidedown{
+				0%{
+					transform: translate(-2000px, 0px);
+				}
+				100%{
+					transform: translate(0px, 0px);
+				}
+			}
+
+			.panel{
+				border-radius: 15px;
+				display: inline-block;
+				width: auto;
+				height: auto;
+				padding: 10px;
+				margin: 30px;
+				background-color: #3D3B8E;
+			}
+
+			.panel h3 {
+				color: white;
+			}
+
+			.panel h5 {
+				color: white;
+			}
+
+			.panel img {
+				width: 200px;
+				height: 200px;
+			}
+
+			.pagestart{
+				padding: 20px;
+			}
+
+			.extrapadding{
+				padding-left: 30px;
+				padding-right: 30px;
+			}
+
+			.headertitle{
+				padding-left: 10px;
+				padding-right: 10px;
+				color: white;
+			}
